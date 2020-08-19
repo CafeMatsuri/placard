@@ -1,0 +1,179 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body {
+	background-color: #e4e4e4;
+	background-image: url(https://cdn.jsdelivr.net/gh/CafeMatsuri/placard@master/p/susie-ho-_Pz1Do4nw-8-unsplash.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+	font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+#content {
+	display: flex;
+	height: inherit;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	flex-direction: column;
+}
+
+.section {
+	margin: 0 2em;
+}
+
+#header {
+	display: grid;
+	height: 6em;
+	align-items: center;
+	grid-auto-flow: column;
+	grid-template-columns: 5% 95%;
+}
+
+#title {
+	padding-left: 1em;
+	font-size: 2.5em;
+	font-family: Pacifico;
+}
+
+#logo {
+	height: 50%;
+}
+
+#annotation {
+	display: grid;
+	margin-bottom: 3.5em;
+	text-align: justify;
+	align-items: center;
+	grid-template-rows: auto;
+	grid-gap: 5em;
+}
+
+#col-1 {
+	display: flex;
+	margin-top: 2em;
+	flex-direction: column;
+	align-items: center;
+}
+
+#col-2>p:before {
+	content: "　　";
+}
+
+p {
+	margin: 0;
+}
+
+h3 {
+	margin: .6em 0;
+}
+
+h3,
+h4,
+p,
+sub {
+	text-shadow: 1px 1px 10px #fff;
+}
+
+.btn {
+	padding: .5em 0;
+	width: 85px;
+	border: 1px solid #000;
+	border-radius: 8px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.btn:focus {
+	outline: 0;
+}
+
+#footer {
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-item {
+	display: inline-flex;
+	align-items: center;
+}
+
+.item-icon {
+	display: inline-block;
+	padding-left: 1em;
+}
+
+.divider {
+	margin: 0 1em;
+}
+
+@media screen and (max-width:354px) {
+	.section {
+		margin: 0 .8em;
+	}
+}
+
+@media screen and (min-width:768px) {
+	.section {
+		margin: 0 4em;
+	}
+
+	#title {
+		padding-left: .5em;
+		font-size: 2.7em;
+	}
+
+	#annotation {
+		grid-template-columns: 40% 55%;
+		grid-gap: 5%;
+	}
+
+	#col-1 {
+		margin-top: 0;
+	}
+}
+
+@media screen and (min-width:1024px) {
+	.section {
+		margin: 0 6em;
+	}
+
+	#title {
+		padding-left: .4em;
+		font-size: 3em;
+	}
+
+	#logo {
+		height: 60%;
+	}
+
+	#footer {
+		display: flex;
+		font-size: .9em;
+	}
+}
+
+@media screen and (min-width:1366px) {
+	#content-holder {
+		height: -webkit-fill-available;
+	}
+
+	#title {
+		padding-left: 0;
+	}
+
+	#footer {
+		padding-bottom: 1em;
+		font-size: 1em;
+	}
+}
